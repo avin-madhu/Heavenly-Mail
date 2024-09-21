@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule Email</title>
+</head>
+<body>
+    <style>
+        form{
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+    <h1 align="center">Schedule an Email to Loved Ones</h1>
+    <form align="center" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Schedule Email</button>
+    </form>
+</body>
+</html>

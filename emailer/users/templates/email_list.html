@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <title>Email List</title>
+</head>
+<body>
+
+    <style>
+        .email-list-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px;
+            background-color: white;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            font-family: "Roboto Mono";
+        }
+        body {
+            background-color: #0056b3;
+        }
+    </style>
+
+    {% for email in emails %}
+    <div class="email-list-container">
+        <p>Email scheduled subject:{{email.subject}}</p>
+        <p>Date:{{email.send_on}}</p>
+    </div>
+    {% endfor %}
+
+</body>
+</html>
